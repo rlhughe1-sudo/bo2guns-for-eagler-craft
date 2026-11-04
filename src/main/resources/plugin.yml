@@ -1,0 +1,15 @@
+name: Bo2Guns
+main: me.bo2guns.Bo2Guns
+version: 1.0
+description: Private BO2-style hitscan guns
+commands:
+  bo2:
+    description: Give / list BO2 guns
+    usage: /bo2 <give|list> [gun] [player]
+permissions:
+  bo2guns.admin:
+    description: Spawn guns
+    default: op
+  bo2guns.use:
+    description: Fire guns
+    default: op
