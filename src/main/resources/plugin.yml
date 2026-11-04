@@ -1,15 +1,14 @@
-name: Bo2Guns
-main: me.bo2guns.Bo2Guns
-version: 1.0
-description: Private BO2-style hitscan guns
+name: BO2Weapons
+version: 1.0.0
+main: com.ryden.bo2weapons.BO2Weapons
+author: slimeden
+description: BO2-inspired weapons for DBSMP
+
 commands:
-  bo2:
-    description: Give / list BO2 guns
-    usage: /bo2 <give|list> [gun] [player]
+  guns:
+    description: BO2 weapons management
+    usage: /guns
+
 permissions:
-  bo2guns.admin:
-    description: Spawn guns
-    default: op
-  bo2guns.use:
-    description: Fire guns
+  bo2weapons.admin:
     default: op
