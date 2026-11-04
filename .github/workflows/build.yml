@@ -1,23 +1,33 @@
-name: Build Bo2Guns
+
+name: Build BO2Weapons
 
 on:
   push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java 8
+        uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '8'
           cache: maven
-      - name: Build jar
-        run: mvn -B package
-      - name: Upload jar
+
+      - name: Build BO2Weapons
+        run: mvn -B clean package
+
+      - name: Upload BO2Weapons JAR
         uses: actions/upload-artifact@v4
         with:
-          name: Bo2Guns-jar
-          path: target/Bo2Guns-1.0.jar
+          name: BO2Weapons
+          path: target/BO2Weapons.jar
